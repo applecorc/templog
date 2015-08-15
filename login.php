@@ -33,7 +33,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
 		print_r($_SESSION);
 	}
 } else {
-	$return = 1;
+	//$return = 1;
 }
 //echo $return;
 ?>	

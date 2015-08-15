@@ -1,22 +1,31 @@
 <?php
 	session_start();
-	include_once("include_files/db.inc.php");
-	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
-	$sql = "SELECT * FROM `STATIONS` ORDER BY `Name`";
-	$result = $db->query($sql);
-	$stations=array();
-	$items=array();
-
-	while($row = $result->fetch_assoc()) {
-		$stations[$row['id']] = $row["Name"];
-	}
 	
-	$sql = "SELECT * FROM `ITEMS` ORDER BY `Name`";
-	$result = $db->query($sql);
-
-	while($row = $result->fetch_assoc()) {
-		$items[$row['id']] = $row["Name"];
-	}
+	if (!isset($_SESSION['USER'])){
+		header('Location: index.php');
+		exit();
+	} elseif (empty($_SESSION['USER'])){
+		header('Location: index.php');
+		exit();
+	} else {
+		include_once("include_files/db.inc.php");
+		$db = new mysqli($db_server, $db_username, $db_password, $db_name);
+		$sql = "SELECT * FROM `STATIONS` ORDER BY `Name`";
+		$result = $db->query($sql);
+		$stations=array();
+		$items=array();
+		
+		while($row = $result->fetch_assoc()) {
+			$stations[$row['id']] = $row["Name"];
+		}
+		
+		$sql = "SELECT * FROM `ITEMS` ORDER BY `Name`";
+		$result = $db->query($sql);
+		
+		while($row = $result->fetch_assoc()) {
+			$items[$row['id']] = $row["Name"];
+		}
+}
 ?>
 <!DOCTYPE html>
 <html>
