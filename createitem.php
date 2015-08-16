@@ -24,6 +24,7 @@ if (!isset($_SESSION['USER'])){
 	while($row = $result->fetch_assoc()) {
 		$stations[$row['id']] = $row["Name"];
 	}
+	$db->close();
 }
 ?>
 <!DOCTYPE html>

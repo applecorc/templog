@@ -25,6 +25,7 @@
 		while($row = $result->fetch_assoc()) {
 			$items[$row['id']] = $row["Name"];
 		}
+		$db->close();
 }
 ?>
 <!DOCTYPE html>
