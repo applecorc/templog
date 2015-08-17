@@ -1,12 +1,13 @@
 <?php
 	session_start();
 	include_once("include_files/db.inc.php");
-	$station = $_REQUEST['Station'];
-	$item = $_REQUEST['Item'];
-	$temp = $_REQUEST['Temp'];
+	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
+	
+	$station = $db->real_escape_string($_REQUEST['Station']);
+	$item = $db->real_escape_string($_REQUEST['Item']);
+	$temp = $db->real_escape_string($_REQUEST['Temp']);
 	$response = "";
 	
-	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
 	$sql = "INSERT INTO `TEMPS` (`Item`, `Temp`,`Unit`,`Station`,`Time`,`EnteredBy`,`IsOutOfRange`) VALUES ($item,$temp,12,$station,now(),1,0)";
 	
 	if ($db->query($sql) === TRUE) {

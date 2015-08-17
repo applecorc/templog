@@ -3,9 +3,10 @@
 	include_once("include_files/db.inc.php");
 
 if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
-	$user = $_REQUEST['name'];
-	$pass = $_REQUEST['password'];
 	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
+	$user = $db->real_escape_string($_REQUEST['name']);
+	$pass = $db->real_escape_string($_REQUEST['password']);
+	
 	$query = "SELECT `Salt` FROM `USERS` WHERE `Username` = '$user'";
 	$results = $db->query($query);
 	if ($results->num_rows == 0){
@@ -35,5 +36,6 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
 } else {
 	//$return = 1;
 }
+$db->close();
 //echo $return;
 ?>	
