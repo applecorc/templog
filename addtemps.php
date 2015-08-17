@@ -10,6 +10,7 @@
 	$sql = "INSERT INTO `TEMPS` (`Item`, `Temp`,`Unit`,`Station`,`Time`,`EnteredBy`,`IsOutOfRange`) VALUES ($item,$temp,12,$station,now(),1,0)";
 	
 	if ($db->query($sql) === TRUE) {
+		$id = $db->insert_id;
 		$query = "SELECT `Temp` FROM `ITEMS` WHERE `id` = '$item'";
 		$results = $db->query($query);
 		$result = $results->fetch_assoc();
@@ -18,6 +19,8 @@
 			case 'Hot':
 				if ($temp < 135.0) {
 					echo "<div>Warning! Temperature is too cold.</div>\n<a href='temps.php'>Return to Temps</a>";
+					$sql = "UPDATE `TEMPS` SET `IsOutOfRange`= TRUE WHERE `id`=$id";
+					$db->query($query);
 				}
 				$db->close();
 				exit;
@@ -25,6 +28,8 @@
 			case 'Cold':
 				if ($temp > 41.0) {
 					echo "<div>Warning! Temperature is too warm.</div>\n<a href='temps.php'>Return to Temps</a>";
+					$sql = "UPDATE `TEMPS` SET `IsOutOfRange`= TRUE WHERE `id`=$id";
+					$db->query($query);
 				}
 				$db->close();
 				exit;
@@ -32,6 +37,8 @@
 			case 'Frozen':
 				if ($temp > 25.0) {
 					echo "<div>Warning! Temperature is too warm.</div>\n<a href='temps.php'>Return to Temps</a>";
+					$sql = "UPDATE `TEMPS` SET `IsOutOfRange`= TRUE WHERE `id`=$id";
+					$db->query($query);
 				}
 				$db->close();
 				exit;
