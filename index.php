@@ -1,57 +1,38 @@
 <?php
-	include_once("include_files/db.inc.php");
-	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
-	$sql = "SELECT * FROM `STATIONS` ORDER BY `Name`";
-	$result = $db->query($sql);
-	$stations=array();
-	$items=array();
-
-	while($row = $result->fetch_assoc()) {
-		$stations[$row['id']] = $row["Name"];
-	}
-	
-	$sql = "SELECT * FROM `ITEMS` ORDER BY `Name`";
-	$result = $db->query($sql);
-
-	while($row = $result->fetch_assoc()) {
-		$items[$row['id']] = $row["Name"];
-	}
+session_start();
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UW Dining Temperature Log </title>
+<link href="include_files/login-box.css" rel="stylesheet" type="text/css" />
+<meta name="author" content="Cory Cloutier">
+<!-- Date: 2015-08-15  -->
+</head>
 
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Temperature Log</title>
- </head>
- 
- <body>
-  <form action="temps.php">
-   <p>
-	<select name="Station">
-<?php
-	foreach($stations as $id => $name) {
-		echo "<option value='$id'>$name</option>\n";
-	}
-?>
-	</select>
-   </p>
-   <p>
-	<select name ="Item">
-<?php
-	foreach($items as $id => $name) {
-		echo "<option value='$id'>$name</option>";
-	}
-?>
-	</select>
-   </p>
-   
-   <p>
-	<input type="text" name="Temp">
-   </p>
-   
-   <p>
-	<input type="submit">
-   </p>
-  </form>
- </body>
+<body>
+<form action="login.php">
+<div style="padding: 100px 0 0 250px;">
+	<div id="login-box">
+		<H2>Login</H2>
+		Temperature Log For UW Dining
+		<br />
+		<br />
+		<div id="login-box-name" style="margin-top:20px;">User Name:</div><div id="login-box-field" style="margin-top:20px;">
+			<input type="text" name="name" class="form-login" id="userName" title="Username" value="" size="30" maxlength="2048" />
+		</div>
+		<div id="login-box-name">Password:</div>
+		<div id="login-box-field">
+			<input name="password" type="password" id="password" class="form-login" title="Password" value="" size="30" maxlength="2048" />
+		</div>
+		<br />
+		<span class="error" id="loginerror"></span>
+		<br />
+		<br />
+		<input type="image" src="include_files/images/login-btn.png" border="0" alt="Submit" width="103" height="42" style="margin-left:90px;" />
+	</div>
+</div>
+</form>
+</body>
 </html>

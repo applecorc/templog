@@ -1,33 +1,64 @@
 <?php
-	//session_start();
-	include_once("include_files/db.inc.php");
-	$station = $_REQUEST['Station'];
-	$item = $_REQUEST['Item'];
-	$temp = $_REQUEST['Temp'];
-	$response = "";
+	session_start();
 	
-	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
-	$sql = "INSERT INTO `TEMPS` (`Item`, `Temp`,`Unit`,`Station`,`Time`,`EnteredBy`,`IsOutOfRange`) VALUES ($item,$temp,12,$station,now(),1,0)";
-	
-	//echo $sql;
-	if ($db->query($sql) === TRUE) {
-		//$response = $db->insert_id;
-		$host  = $_SERVER['HTTP_HOST'];
-		$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-		$extra = 'index.php';  // change accordingly
-		header("Location: http://$host$uri/$extra");
-		exit;
-	}
-	else {
-	 $reponse = 'Error: '. $db->error;
-	}
-	$db->close();
-	echo $response;
-	/*
-	$response = "";
-	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
-	$sql = "INSERT INTO `comments` (`user_id`, `post_id`, `description`, `created`)
- VALUES ('$user', '$post_id', '$desc', NOW())";//SELECT id, description, user_id FROM posts";
-	
-	print_r($_REQUEST);*/
+	if (!isset($_SESSION['USER'])){
+		header('Location: index.php');
+		exit();
+	} elseif (empty($_SESSION['USER'])){
+		header('Location: index.php');
+		exit();
+	} else {
+		include_once("include_files/db.inc.php");
+		$db = new mysqli($db_server, $db_username, $db_password, $db_name);
+		$sql = "SELECT * FROM `STATIONS` ORDER BY `Name`";
+		$result = $db->query($sql);
+		$stations=array();
+		$items=array();
+		
+		while($row = $result->fetch_assoc()) {
+			$stations[$row['id']] = $row["Name"];
+		}
+		
+		$sql = "SELECT * FROM `ITEMS` ORDER BY `Name`";
+		$result = $db->query($sql);
+		
+		while($row = $result->fetch_assoc()) {
+			$items[$row['id']] = $row["Name"];
+		}
+		$db->close();
+}
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Log</title>
+</head>
+<body>
+	<form action="addtemps.php">
+		<p>
+			<select name="Station">
+<?php
+	foreach($stations as $id => $name) {
+		echo "<option value='$id'>$name</option>\n";
+	}
+?>
+			</select>
+		</p>
+		<p>
+			<select name ="Item">
+<?php
+	foreach($items as $id => $name) {
+		echo "<option value='$id'>$name</option>";
+	}
+?>
+			</select>
+		</p>
+		<p>
+			<input type="text" name="Temp">
+		</p>
+		<p>
+			<input type="submit">
+		</p>
+	</form>
+</body>
+</html>
