@@ -2,6 +2,7 @@
 session_start();
 include_once("include_files/db.inc.php");
 
+/* Function to check if user has access to the page */
 function Check_Admin_String($neededLevel,$currentLevel){
 	if (strpos($currentLevel, $neededLevel) !== false) {
 		return true;
@@ -10,9 +11,11 @@ function Check_Admin_String($neededLevel,$currentLevel){
 	}
 }
 
+/* function to escape $_REQUESTs */
 function Is_Set_Request($request,$db){
 	/* check if server is alive */
 	if ($db->ping()) {
+		/* escape request string */
 		if(isset($_REQUEST[$request]) && !empty($_REQUEST[$request])) {
 			return $db->real_escape_string($_REQUEST[$request]);
 		} else {

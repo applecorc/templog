@@ -5,6 +5,7 @@
 */
 DEFINE("ADMINLEVELNEEDED",'AddUser');
 include_once("include_files/access.inc.php");
+$db = new mysqli($db_server, $db_username, $db_password, $db_name);
 
 function genKey($length) {
 	if($length > 0) { 

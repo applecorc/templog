@@ -34,9 +34,10 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
 		print_r($_SESSION);
 		print_r(str_getcsv($_SESSION['ADMINLEVEL']));
 	}
+	$db->close();
 } else {
 	//$return = 1;
 }
-$db->close();
+
 //echo $return;
 ?>	

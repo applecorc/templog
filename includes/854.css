@@ -1,0 +1,968 @@
+@import url('//tools.wiscwebcms.wisc.edu/cmsassets/housing.wisc.edu/css/fonts.min.css'); 
+@media only screen {
+    .cb-news-list .block-settings { color:white!important;}
+    .block-settings p {
+        color: #FFF!important;
+    }
+    .wisc-carousel .carousel__well {
+        overflow: visible;
+    }
+    .left-sidebar.sidebar-width-3 > .row,
+    .right-sidebar.sidebar-width-3 > .row {
+        background-color: #fff;
+        background-image: none;
+    }
+    .page-main {
+        background: #fff;
+    }
+    .main-nav .search {
+        display: none; 
+    }
+    .main-nav .dropdown-text{
+        display:none;
+    }
+    .wisc-carousel {
+        padding-top: 0;
+    }
+    .wisc-carousel .carousel__caption h2 {
+        color: #fff;
+        font-family: "HarmoniaSans W01 Black";
+        font-size: 24px;
+        line-height: 1;
+        /*margin-bottom: 1.2rem;*/
+    }
+    .wisc-carousel .carousel__caption p {
+        color: #fff;
+        font-family: "HarmoniaSansW01-LightIt";
+        font-size: 16px;
+        line-height: 1.2rem;
+    }
+    .wisc-carousel .carousel__pager {    
+        display: none;
+    }
+    .wisc-carousel .carousel__controls {
+        display: none;
+    }
+    .wisc-carousel .carousel__caption a {
+        border: none;
+    }
+    .page-main > .row {
+        border: 0;
+        padding-top: 2rem;
+        z-index: 9;
+    }
+    .home .page-main > .row {
+        padding-top: 0;
+    }
+    .page-main h1 {
+        font-size: 40px;
+        font-family: "HarmoniaSans W01 Black";
+        line-height: 2.8rem;
+    }
+    .page-main h1:first-child {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .residence.halls .page-main h1,
+    .apartments .page-main h1,
+    .dining .page-main h1,
+    .conference.services .page-main h1,
+    .employment .page-main h1,
+    .about.us .page-main h1 {
+        margin-top: -2.5rem;
+    }
+    
+    .page-main h2 {
+        font-size: 24px;
+        font-family: "HarmoniaSans W01 Bold";
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+    }
+    .page-main h2 a {
+        color: #000;
+    }
+    .page-main h2 a:hover {
+        text-decoration: none;
+        color: #000;
+    }
+    .page-main h3 {
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 SemiBd";
+        color: #000;
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+        font-weight: normal;
+    }
+    .page-main h4 {
+        font-size: 16px;
+        font-family: "HarmoniaSansW01-SemiBdC";
+        color: #000;
+        text-decoration: underline;
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+    .page-main h5 {
+        font-size: 16px;
+        font-family: "HarmoniaSansW01-Condens";
+        color: #000;
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+    .page-main p {
+        font-size: 16px;
+        font-family: "HarmoniaSans W01";
+        color: #404040;
+        margin-bottom: 1rem;
+        line-height: 1.4rem;
+    }
+    .page-main a {
+        font-family: "HarmoniaSans W01 SemiBd";
+        color: #b70101;
+    }
+    .page-main a:hover {
+        text-decoration: underline;
+        color: #b70101;
+    }
+    .page-main .column.content ul, .page-main .column.content ol {
+        font-size: 16px;
+        font-family: "HarmoniaSans W01";
+        color: #404040;
+        margin-bottom: 1rem;
+        line-height: 1.4rem;
+        margin-left: 4rem;
+    }
+    .page-main li {
+        margin-bottom: 0.75rem;
+    }
+    .page-main strong, .page-main b {
+        font-family: "HarmoniaSans W01 Bold";
+        font-weight: normal;
+    }
+    .page-main em, .page-main i {
+        font-family: "HarmoniaSans W01 Italic";
+        padding-right: 0.25rem;
+    }
+    .page-main blockquote { 
+        margin-left: 3rem; 
+        margin-right: 4rem; 
+        border-left: solid black 2px; 
+        margin-top: 1rem; 
+        margin-bottom: 1rem; 
+        padding-top: 0; 
+        padding-left: 1rem; 
+    } 
+    .page-main blockquote p { 
+        font-family: "HarmoniaSansW01-SemiBdI"; 
+        line-height: 1.8rem; 
+        color: #000000; 
+        font-size: 21px; 
+        font-weight: normal; 
+    }
+    .page-main .column.content table {
+        border-collapse: collapse;
+        border: 1px solid #404040;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .page-main .column.content td {
+        font-size: 16px;
+        font-family: "HarmoniaSans W01";
+        color: #404040;
+        border: 1px solid #404040;
+        border-collapse: collapse;
+    }
+    .page-main .column.content th {
+        font-family: "HarmoniaSans W01 Bold";
+        font-size: 18px;
+        background-color: #404040;
+        color: #fff;
+    }
+    .page-main .column.content th > a {
+        color: #fff;
+    }
+    .page-main .column.content th > a:hover {
+        color: #fff;
+    }
+    .page-main .cb-gallery .clearing-assembled .carousel {
+        margin-left: -4em;
+    }
+    .page-main .cb-gallery .clearing-assembled .carousel a.th {
+        border: none;
+        box-shadow: none;
+    }
+    .page-main .cb-gallery .clearing-assembled .carousel li {
+        margin: 0.5rem;
+    }
+    .page-main img.img-right {
+        padding-left: 10px;
+    }
+    .page-main img.img-left {
+        padding-right: 10px;
+    }
+    .page-main hr {
+        border: 1px solid #404040;
+    }
+    .tabs-container .tabs a {
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 SemiBd";
+        font-weight: normal;
+        text-decoration: none;
+    }
+    .tabs-container .tabs .active a {
+        font-family: "HarmoniaSans W01 Bold";
+        font-weight: normal;
+        color: #b70101;
+    }
+    .tabs-container .tabs .active a:hover {
+        text-decoration: none;
+    }
+    .accordion .accordion-panel .panel-title {
+        background-color: #404040;
+    }
+    .accordion .accordion-panel .panel-title a {
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 SemiBd";
+        color: #fff;
+        font-weight: normal;
+    }
+    .accordion .accordion-panel .panel-title a:hover {
+        background-color: #b70101;
+        color: #fff;
+    }
+    .accordion .accordion-panel.active .panel-title {
+        border: none;
+    }
+    .accordion .accordion-panel.active .content {
+        border: 1px solid #404040;
+        border-collapse: collapse;
+    }
+    .accordion .accordion-panel.active .panel-title a {
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 SemiBd";
+        color: #fff;
+        font-weight: normal;
+    }
+    button, .button {
+        border-top: 1px solid #b70101;
+        background: #b70101;
+        padding: 5px 20px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: #fff;
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 Bold";
+        text-decoration: none;
+    }
+    button:hover, .button:hover {
+        background: #404040;
+        color: #fff;
+    }
+    .clearing-caption {
+        color: #ccc !important;
+        opacity: 0.8;
+    }
+    iframe {
+        max-width: 100%;
+    }
+    .breadcrumbs {
+        background-color: transparent;
+        border: 0;
+        margin-bottom: 0;
+        text-align: right;
+        float: right;
+        font-family: "HarmoniaSans W01";
+        margin-right: -12px;
+        height: 2em;  
+    }
+    .breadcrumbs li {
+        font-size: 12px;
+        margin-left: -7px;
+        text-transform: capitalize;
+    }
+    .breadcrumbs a {
+        margin-left: -7px;
+    }
+    .carousel {
+        padding-top: 0;
+    }
+    .carousel__item img {
+        display: block;
+        height: auto;
+    }
+    .ftr-social li {
+        background:url('social.png') no-repeat top left;
+        margin-top:10px;
+    }
+    .ftr-social a {
+        display: block;
+        height: 100%;
+    }
+    .ftr-social a:hover {
+        text-decoration:none;
+    }
+    .ftr-social {
+        margin: 10px 60px 0 0;
+    }
+    .ftr-social li {
+        display: inline-block;
+    }
+    .ftr-social li + li {
+      margin-left: 1.375rem;
+    }
+    .page-footer a, .page-footer p {
+        color: #fff;
+    }
+    .page-footer h2,
+    .page-footer .h2 {
+        color: #E3DAC3;
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 Black";
+        margin-top: 3.2px;
+        margin-bottom: 8px;
+    }
+    .page-footer ul {
+        margin-left: 0;
+        list-style: none;
+    }
+    .page-footer p {
+        font-size: 14px;
+        font-family: "HarmoniaSans W01";
+    }
+    .ftr-social .sprite-chat-icon { background-position: 0 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-email-icon { background-position: -76px 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-facebook-icon { background-position: -152px 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-foursquare-icon { background-position: -228px 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-instagram-icon { background-position: -304px 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-linked-in-icon { background-position: -380px 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-twitter-icon { background-position: -456px 0; width: 26px; height: 26px; } 
+    .ftr-social .sprite-youtube-icon { background-position: -532px 0; width: 26px; height: 26px; } 
+
+    .department-banner--mobile > a {
+        font-size: 1.50rem;
+    }
+}
+@media only screen and (min-width: 40.063em) {
+    body {
+        background-color: #222;
+    }
+    .fixed {
+        z-index: 150;
+    }
+    .page-header {
+        background-image: url('images/header.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #222;
+        height: 140px;
+    }
+        .page-header .column {
+            background: none;
+        }
+        .page-header .brand-wordmark {
+            display: none;
+        }
+        .page-header > .row {
+            background: none;
+        }
+        .page-header .brand-logo {
+            left: 2rem;
+            top: -1rem;
+        }
+    .department-banner {
+        font-size: 3.5rem;
+        left: 7.25rem;
+        top: -0.5rem;
+    }
+    .department-banner > a {
+        text-shadow:
+           1px 1px 0 rgba(0,0,0,0.2),
+           -1px -1px 0 rgba(0,0,0,0.2),  
+           1px -1px 0 rgba(0,0,0,0.2),
+           -1px 1px 0 rgba(0,0,0,0.2),
+           1px 1px 0 rgba(0,0,0,0.2);
+    }
+    .department-banner a:hover {
+        text-decoration: none;
+    }
+    .top-bar-section .has-dropdown > a {
+        padding-right: 15px !important;
+    }
+    .top-bar-section .has-dropdown {
+        position: inherit;
+    }
+        .home .top-bar-section .has-dropdown {
+            position: relative;
+        }
+    .home .main-nav {
+        z-index: 900;
+        height: 35px;
+    }
+    .home .main-nav li a {
+        font-family: "HarmoniaSans W01 Bold";
+        font-size: 18px;
+    }
+    .home .main-nav li.has-dropdown a:hover {
+        background-color: #b70101;
+    }
+    .main-nav {
+        z-index: 10;
+    }
+    .main-nav .dropdown-text{
+        display: block;
+    }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown {
+        background-color:#b70101;
+        border: 0;
+        box-shadow: none;
+        color: #fff;
+        width: 1000px;
+        overflow: visible;
+    }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown {
+            display: none;
+            height: auto;
+        }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown:hover .dropdown {
+            display: block;
+        }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown > ul {
+        width: 100%;
+    }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown > .row > ul {
+            border-left: 2px solid #fff;
+            float: right;
+            width: 25%;
+            margin-top: 1.5rem;
+        }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown > ul > li {
+        float: left;
+    }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown > .row > ul > li {
+            float: none;
+            padding-left: 20px;
+            width: 100%;
+        }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown > ul > li:hover {
+            background-color:#b70101;
+        }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li:not(.has-form) > a:not(.button) {
+        color: #fff;
+    }
+    .main-nav.mega .top-bar-section > ul:not(.utility-nav) ul > li.has-dropdown > a {
+        font-weight: normal;
+    }
+    .main-nav .top-bar-section > ul:not(.utility-nav) > li:hover, .main-nav .top-bar-section > ul:not(.utility-nav) > li.active {
+        background-image: none;
+    }
+    .main-nav .top-bar-section > ul:not(.utility-nav) > li > a {
+        border-right: none;
+    }
+    .main-nav .top-bar-section > ul:not(.utility-nav) ul > li > a {
+        font-family: "HarmoniaSans W01";
+    }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li:hover:not(.has-form) > a:not(.button),
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li.active:not(.has-form) > a {
+        background-color: #fff;
+        color:#b70101;
+    }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li:hover:not(.has-form) > a:not(.button),
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li.active:not(.has-form) > a {
+            background-color: transparent;
+            color: #fff;
+        }
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li:hover:not(.has-form) > a:not(.button):hover,
+        .home .main-nav .top-bar-section :not(.utility-nav) .has-dropdown .dropdown li.active:not(.has-form) > a:hover {
+            text-decoration: underline;
+        }
+    .top-bar-section :not(.utility-nav) .dropdown li {
+        width: auto;
+    }
+    .top-bar-section :not(.dropdown) li a {
+        font-family: "HarmoniaSans W01 Bold";
+        font-size: 18px;
+    }
+    .top-bar-section :not(.utility-nav) .dropdown li a {
+        font-family: "HarmoniaSans W01";
+        font-size: 13.5px;
+    }
+    .active.has-dropdown .dropdown {
+        height: auto;
+        clip: auto;
+    }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown:hover .dropdown {
+        z-index: 999;
+    }
+    .home .dropdown .dropdown-text {
+        float: left;
+        margin-left: 1rem;
+        width: 70%;
+    }
+    .home .dropdown {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #b70101;
+        /*opacity: 0.8;*/
+
+    }
+    .home .dropdown::before {
+        background-color: #b70101;
+        content: " ";
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0.8;
+        position: absolute;
+        top:0;
+        width: 100%;
+        z-index:-1;
+    }
+    .home .dropdown h1,
+    .home .dropdown h2,
+    .home .dropdown h3 {
+        color:#fff;
+    }
+    .home .dropdown-text > h2 {
+        font-family: "HarmoniaSans W01 Black";
+        font-size: 48px; 
+    }
+    .home .dropdown-text > p {
+        font-family: "HarmoniaSans W01";
+        font-size: 18px;
+    }
+    .home #resid .dropdown {
+        background-image:url("2013-08-29-elizabeth-waters-move-in-2.jpg");
+    }
+    .home #apart .dropdown {
+        background-image:url("2013-10-09-campus-aerials-fall-5.jpg");
+    }
+    .home #dinin .dropdown {
+        background-image:url("2012-08-30-gordon-avenue-market-1.jpg");
+    }
+    .home #confe .dropdown {
+        background-image:url("2012-07-16-track-camp-check-in-1.jpg");
+    }
+    .home #emplo .dropdown {
+        background-image:url("2013-08-21-res-life-training-44.jpg");
+    }
+    .home #about .dropdown {
+        background-image:url("2011-10-05-campus-aerials-fall-2.jpg");
+    }
+    /* Specific Dropdown Offsets for Interior Pages 
+    *    AS OF 1/12/15 WE SHOULDN'T NEED THESE, KEEPING FOR TESTING PURPOSES
+    */ 
+    /*.top-bar-section .left li .apart.dropdown {
+        left: -195px;
+    }
+    .top-bar-section .left li .dinin.dropdown {
+        left: -346px;
+    }
+    .top-bar-section .left li .confe.dropdown {
+        left: -453px;
+    }
+    .top-bar-section .left li .emplo.dropdown {
+        left: -698px;
+    }
+    .top-bar-section .left li .about.dropdown {
+        left: -856px;
+    }*/
+    .utility-nav > .contain-to-grid {
+        background-color: #b70101;
+    }
+    .utility-nav .top-bar {
+        background-color: #b70101;
+        height: 25px;
+        line-height: 1.8rem;
+    }
+    .utility-nav .top-bar-section .has-dropdown > a {
+        padding-right: 15px !important;
+    }
+    .utility-nav .top-bar-section .has-dropdown > a:after {
+        display: none;
+    }
+    .utility-nav .top-bar-section ul li,
+    .utility-nav .top-bar-section li:not(.has-form) a:not(.button) {
+        background: none;
+        line-height: 1.8rem;
+        height: 1.8rem; 
+    }
+    .utility-nav .wordmark {
+        width: 1000px;
+        margin: 0px auto;
+        display: block;
+        float: none !important;
+    }
+    .utility-nav .brand-wordmark {
+        color: #fff;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .utility-nav .search input[type="text"] {
+        height: 1.25rem;
+        padding: 2px;
+        margin: 0;
+        top: 2px;
+        font-size:12px;
+    }
+    .utility-nav .top-bar-section ul li > a.brand-wordmark {
+        font-family: "HarmoniaSans W01";
+        text-transform: uppercase;
+        font-size: 12px;
+        top: -1px;
+    }
+    .utility-nav #my-uw a {
+        font-family: "HarmoniaSans W01";
+        font-size: 12px;
+        margin-top: -1px;
+        padding-left: 25px;
+        background: no-repeat url("house.png") 0 2px;
+    }    
+    .main-nav {
+        background-color: #E2DAC2;
+    }
+    .main-nav .utility-nav {
+        display: none;
+    }
+    .main-nav .top-bar {
+        background-image: none; 
+        background-color: #E2DAC2;
+        height: 35px;
+    }
+    .main-nav .top-bar-section > ul:first-child > li:not(.has-form) > a:not(.button) {
+        padding: 0 1.25em!important;
+        text-align: center;
+        text-transform: uppercase;
+        height: 35px;
+        display: block;
+    }
+    .main-nav .top-bar-section > .left:first-child {
+        width: 100%;
+    }
+    .main-nav .top-bar-section > ul:not(.utility-nav) > li {
+        border-right: 0;
+    }
+    .main-nav .top-bar-section > ul > li > a {
+        border-right: 0;
+        padding: 0 3em;
+    }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown > a{ 
+        padding-right: 15px;
+    }
+    .main-nav .top-bar-section :not(.utility-nav) .has-dropdown > a:after {
+        display:none;
+    }
+    .main-nav .top-bar-section > ul > li.active, .main-nav .top-bar-section > ul > li.active:hover {
+        background-color: #b70101;
+        background-image: none;
+    }
+    .main-nav .top-bar-section > ul > li:hover {
+        background-color: #b70101;
+        background-image: none;
+    }
+    .main-nav .top-bar-section > ul > li:hover > a, .main-nav .top-bar-section li.active:not(.has-form) a {
+        color:#fff;
+    }
+    .home .main-nav .top-bar .row{
+        max-width: 62.5rem; 
+    }
+    
+    /* Carousel Overrides */
+    .wisc-carousel {
+        background-color: #b70101;
+        padding-top: 2em;
+    }
+    .wisc-carousel .carousel__caption {
+        background: transparent;
+        background-color: #b70101;
+        border-left: 15px solid #fff;
+        bottom: 6rem;
+        padding-top: 0.1em;
+        padding-bottom: 1em;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        position: absolute;
+        width: auto;
+    }
+    .wisc-carousel .carousel__pager > span:hover {
+        cursor: pointer;    
+    }
+    .wisc-carousel .cycle-pager-active {
+        color: #b70101;
+    }
+    .wisc-carousel .carousel__caption h2 {
+        font-size: 36px;
+    }
+    .wisc-carousel .carousel__pager {    
+        display: block;
+    }
+    /* Sidebar Navigation Styles */
+    
+    /* First-level navigation items */
+    .sidebar-nav a {
+        color: #000;
+        display: block;
+        font-family: "HarmoniaSans W01";
+        font-size: 14px;
+        line-height: 1.4em;
+    }
+    .sidebar-nav > ul > li > a {
+        display: block;
+        padding: 0px 0.5em;
+        border-left-style: solid;
+        border-left-width: 3px;
+        margin-left: -3px;
+        margin-bottom: 0.75em;
+    }
+    .sidebar-nav > ul > li > a[href="#"] {
+        background-color: #404040;
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        font-family: "HarmoniaSans W01 Bold";
+        padding-left: 10px;
+        margin-top: 1em;
+    }
+    .sidebar-nav > ul > li:first-child > a {
+        margin-top: 0;
+    }
+    .sidebar-nav > ul > li > a[href="#"]:hover {
+        text-decoration: none;
+        cursor: default;
+    }
+    .sidebar-nav > ul > li.active > a {
+        color: #fff;
+        background-color: #B70101;
+        border-left-color: #E2D9C1;
+    }
+    .sidebar-nav > ul > li > ul {
+        margin-bottom: 1em;
+    }
+    .sidebar-nav .sub-menu {
+        margin-left: 0;
+    }
+    .sidebar-nav > ul > li:first-child {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 0;
+    }
+    .sidebar-nav > ul > li > .dropdown {
+        margin-top: 0.5em;
+    }
+    .sidebar-nav > ul > li > a {
+        font-family: "HarmoniaSans W01 SemiBd";
+        font-size: 14px;
+        color: #404040;
+        font-weight: normal;  
+    }
+    .sidebar-nav .dropdown > ul > li > a {
+        color: #404040;
+        display: block;
+        padding: 0 0.5em;
+        border-left: solid 3px #404040;
+        margin-bottom: 0.5em;
+        font-family: "HarmoniaSans W01 SemiBd";
+        font-size: 14px;
+    }
+    .sidebar-nav > ul > li > .dropdown > ul > li.active > a {
+        background-color: #b70101;
+        border-left-color: #e2d9c1;
+    }
+    .sidebar-nav > ul > li > .dropdown > ul > li.active > a {
+        color: #fff;
+    }
+    .sidebar-nav .sub-menu > li > ul {
+        margin-bottom: 0.5em;
+    }
+    .sidebar-nav .w-link > a {
+        background: url('w-with-hands.png') 8px 3px no-repeat;
+        line-height: 1.2rem;
+        padding-left: 30px;
+        margin-bottom: 0.5em;
+    }
+    .sidebar-nav .w-link.active > a {
+        background-image: url('w-with-hands-active.png');
+        color: #b70101;
+    }
+    
+    /* Content Area Styles */
+    .page-main {
+        background-color: #F3E7D1;
+        background-image: linear-gradient(to bottom, #C2B49A, #F3E7D1, #F3E7D1);    
+    }
+    .page-main > .row {
+        position: relative;
+        box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+    /*.page-main {
+        margin-top: -2em;
+    }
+    .page-main > .row {
+        z-index: 9999;
+    }*/
+    .wisc-carousel + .page-main > .row {
+        z-index: 9999;
+    }
+    .wisc-carousel + .page-main {
+        margin-top: -2em;
+    }
+    .home .page-main .row .column.content {
+        margin-top: -0.5rem;
+    }
+    .home .wisc-carousel {
+        padding-top: 0;
+    }
+    .wisc-carousel .carousel__pager {
+        bottom: 1rem;
+        left: -10px;
+        color: #fff;
+        font-size: 4rem;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 200;
+    }
+    .wisc-carousel .carousel__controls {
+        margin-top: -20px;
+        right: auto;
+        top: 50%;
+        width: 100%;
+    }
+    .wisc-carousel .carousel__pager > span {
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+    .wisc-carousel .carousel__controls .fa-step-backward:before {
+        content: "\f104";
+    }
+    .wisc-carousel .carousel__controls .fa-step-forward:before {
+        content: "\f105";
+    }
+    .wisc-carousel .carousel__item img {
+        display: block;
+        height: auto;
+        vertical-align: top;
+    }
+    .wisc-carousel .carousel__item:not(.cycle-sentinel)::before {
+        background-image: linear-gradient(to right, #000 -15%, transparent 100%);
+        content: " ";
+        display: block;
+        height: 100%;
+        width: 20%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .wisc-carousel .carousel__item:not(.cycle-sentinel)::after {
+        background-image: linear-gradient(to right, transparent 0, #000 115%);
+        content: " ";
+        display: block;
+        height: 100%;
+        width: 20%;
+        position: absolute;
+        right: 0;        
+        top: 0;
+    }
+    .wisc-carousel .carousel__button {
+        background-color: transparent;
+        color: #fff;
+        font-size: 4rem;
+        height: auto;
+        margin-top: -50px;
+        transition: none;
+        width: auto;
+    }
+    .wisc-carousel .carousel.hide-play-controls .carousel__button:hover, 
+    .wisc-carousel .carousel.hide-play-controls .carousel__button:focus {
+        background-color: transparent;
+        outline: 0;
+    }
+    .wisc-carousel .carousel__button:hover {
+        background: transparent;
+    }
+    .wisc-carousel .carousel__controls .carousel__button-prev {
+        left: 1rem;
+    }
+    .wisc-carousel .carousel__controls .carousel__button-next {
+        float: right;
+        right: 1rem;    
+    }
+    .wisc-carousel .carousel__controls {
+        display: block;
+    }
+    /* Page Footer Styles */
+    .page-footer {
+        background-color: #222;
+        background-image: url('images/footer.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 1rem;
+        position: relative;
+        z-index: 1;
+        margin-top: -2rem;
+        padding-top: 3rem;
+    }
+    .page-footer .column > .row {
+        position: relative;
+        z-index: 2;
+    }
+    .page-footer > .row:first-child {
+        border-top: 0;
+    }
+    .page-footer ul, .page-footer p {
+        font-size: 0.75rem;
+    }
+    .page-footer .color-overlay {
+        background: -moz-linear-gradient(left center , #222, rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7), #222) repeat scroll 0% 0% transparent;
+        left: -200px;
+        position: absolute;
+        top: -3.5rem;
+        max-width: 1400px;
+        width: 1400px;
+        min-height: 154%;
+        z-index: 0;
+    }
+    #block-639 > .column:nth-child(1),
+    #block-639 > .column:nth-child(2) {
+        text-align: left;
+    }
+    #block-639 > .column:nth-child(3) {
+        text-align: center;
+    }
+    #block-639 > .column:nth-child(4),
+    #block-639 > .column:nth-child(5) {
+        text-align: right;
+    }
+    #block-647 {
+        padding-left: 30px;
+    }
+    #block-642 {
+        position: relative;
+        top: 2px;
+        left: 10px;
+    }
+}
+@media only screen and (min-width: 50.75em) {
+    .page-header .brand-logo {
+        left: 11rem;
+    }
+    .page-header .department-banner {
+        font-size: 4rem;
+        left: 16.25rem;
+    }
+}
+@media print {
+    .wordmark, #my-uw, .search, #block-2166, #block-650, #block-2089, #block-1537, #block-2090 {
+        display: none!important;
+    }
+    .brand-logo, .brand-wordmark, .department-banner {
+        position:static;
+    }
+} 
+ 
