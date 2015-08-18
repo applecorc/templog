@@ -32,6 +32,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
 		$_SESSION['UNIT'] = $result['Unit'];
 		$_SESSION['ADMINLEVEL'] = $result['AdminLevel'];
 		print_r($_SESSION);
+		print_r(str_getcsv($_SESSION['ADMINLEVEL']));
 	}
 } else {
 	//$return = 1;

@@ -18,42 +18,37 @@ $db->close();
 ?>
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Item Creation</title>
- </head>
- 
- <body>
-  <form action="temps.php">
-   <p>
-    Item name: <input type="text" name="Name">
-   </p>
-   <p>
-    Storage: 
-    <select name="Temp">
-     <option value="Hot">Hot Held</option>
-     <option value="Cold">Refrigerated</option>
-     <option value="Frozen">Frozen</option>
-    </select>
-   </p>
-   
-   <p>
-    Station: 
-    <select name="Station">
+<head>
+	<title>Item Creation</title>
+</head>
+
+<body>
+	<form action="additem.php">
+		<p>
+			<label for="Name">Item name:</label>
+			<input type="text" name="Name" id="Name">
+		</p>
+		<p>
+			<label for="Temp">Holding Temp</label>
+			<select name="Temp" id="Temp">
+				<option value="Hot">Hot Held</option>
+				<option value="Cold">Refrigerated</option>
+				<option value="Frozen">Frozen</option>
+			</select>
+		</p>
+		<p>
+			<label for="Station">Default Station</label>
+			<select name="Station" id="Station">
 <?php
 foreach($stations as $id => $name) {
 	echo "<option value='$id'>$name</option>\n";
 }
 ?>
-    </select>
-   </p>
-   <p>
-    Item Added By: 
-    <input type="text" name="AddedBy">
-   </p>
-   <p>
-    <input type="submit">
-   </p>
-  </form>
- </body>
-
+			</select>
+		</p>
+		<p>
+			<input type="submit">
+		</p>
+	</form>
+</body>
 </html>
