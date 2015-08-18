@@ -1,5 +1,10 @@
 <?php
 
+/* Define the admin level needed. Valid values are:
+'ChangeUnit','AddTemp','AddItem','AddUser','ViewLog'
+*/
+DEFINE("ADMINLEVELNEEDED",'AddUser');
+include_once("include_files/access.inc.php");
 
 function genKey($length) {
 	if($length > 0) { 

@@ -1,6 +1,6 @@
 <?php
-	session_start();
-	include_once("include_files/db.inc.php");
+session_start();
+include_once("include_files/db.inc.php");
 
 if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
 	$db = new mysqli($db_server, $db_username, $db_password, $db_name);
