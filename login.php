@@ -31,8 +31,13 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['password'])){
 		$_SESSION['LASTNAME'] = $result['LastName'];
 		$_SESSION['UNIT'] = $result['Unit'];
 		$_SESSION['ADMINLEVEL'] = $result['AdminLevel'];
-		print_r($_SESSION);
-		print_r(str_getcsv($_SESSION['ADMINLEVEL']));
+		//print_r($_SESSION);
+		//print_r(str_getcsv($_SESSION['ADMINLEVEL']));
+		$host  = $_SERVER['HTTP_HOST'];
+		$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		$extra = 'temps.php';  // change accordingly
+		header("Location: http://$host$uri/$extra");
+		exit;
 	}
 	$db->close();
 } else {

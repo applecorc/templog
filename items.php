@@ -21,7 +21,7 @@ $db->close();
 Header_Html();
 
 ?>
-<form action="additem.php">
+<form action="additems.php">
 	<p>
 		<label for="Name">Item name:</label>
 		<input type="text" name="Name" id="Name">

@@ -38,9 +38,29 @@ Header_Html();
 
 ?>
 <form action="addtemps.php">
+<?php
+	if(Check_Admin_String('ChangeUnit',$_SESSION['ADMINLEVEL'])){   ?>
+	<p>
+		<label for="Unit">Unit:</label>
+		<select name="Unit" id="Unit">
+<?php
+		foreach($units as $id => $name) {
+			echo "<option value='$id'";
+			if ($id == $_SESSION['UNIT']){
+				echo " selected='selected'";
+			}
+			echo ">$name</option>";
+		}
+		?>
+		</select>
+	</p>
+<?php
+	}
+?>
 	<p>
 		<label for="Station">Station:</label>
 		<select name="Station" id="Station">
+			<option value='default' selected='selected'>Select a Station</option>
 <?php
 foreach($stations as $id => $name) {
 	echo "<option value='$id'>$name</option>\n";
@@ -58,21 +78,6 @@ foreach($items as $id => $name) {
 ?>
 		</select>
 	</p>
-<?php
-if(Check_Admin_String('ChangeUnit',$_SESSION['ADMINLEVEL'])){   ?>
-	<p>
-		<label for="Unit">Unit:</label>
-		<select name="Unit" id="Unit">
-<?php
-foreach($units as $id => $name) {
-	echo "<option value='$id'>$name</option>";
-}
-?>
-		</select>
-	</p>
-<?php
-}
-?>
 	<p>
 		<label for="Temp">Temp:</label>
 		<input type="text" name="Temp" id="Temp">
