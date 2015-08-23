@@ -119,7 +119,7 @@ foreach($items as $id => $name) {
 <?php
 		foreach($units as $id => $name) {
 			echo "<option value='$id'";
-			if ($id == $_SESSION['UNIT']){
+			if ($id == $_SESSION['UNIT']) {
 				echo " selected='selected'";
 			}
 			echo ">$name</option>";
