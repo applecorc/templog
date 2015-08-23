@@ -1,5 +1,6 @@
 <?php 
 session_start();
+DEFINE("DEBUG",FALSE);
 include_once("include_files/db.inc.php");
 
 /* Function to check if user has access to the page */
@@ -19,7 +20,9 @@ function Is_Set_Request($request,$db){
 		if(isset($_REQUEST[$request]) && !empty($_REQUEST[$request])) {
 			return $db->real_escape_string($_REQUEST[$request]);
 		} else {
-			echo "ERROR: Is Set Request error 1";
+			if(DEBUG){
+				echo "ERROR: Is Set Request error 1";
+			}
 			return FALSE;
 		}
 	} else {

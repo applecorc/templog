@@ -27,7 +27,7 @@ Header_Html();
 		<input type="text" name="Name" id="Name">
 	</p>
 	<p>
-		<label for="Temp">Holding Temp</label>
+		<label for="Temp">Holding Temp:</label>
 		<select name="Temp" id="Temp">
 			<option value="Hot">Hot Held</option>
 			<option value="Cold">Refrigerated</option>
@@ -35,13 +35,23 @@ Header_Html();
 		</select>
 	</p>
 	<p>
-		<label for="Station">Default Station</label>
+		<label for="Station">Default Station:</label>
 		<select name="Station" id="Station">
 <?php
 foreach($stations as $id => $name) {
 	echo "<option value='$id'>$name</option>\n";
 }
 ?>
+		</select>
+	</p>
+	<p>
+		<label for="Meal">Meal:</label>
+		<select name="Meal" id="Meal">
+			<option value="Breakfast">Breakfast</option>
+			<option value="Lunch">Lunch</option>
+			<option value="Dinner">Dinner</option>
+			<option value="Late Night">Late Night</option>
+			<option value="All Meals">All Meals</option>
 		</select>
 	</p>
 	<p>
