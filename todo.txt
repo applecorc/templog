@@ -1,0 +1,9 @@
+Add htmlentities where needed.
+Add checks for default selects.
+Double check that real escape strings are used where needed.
+
+add user page
+
+add logs page
+
+add edit items & user
